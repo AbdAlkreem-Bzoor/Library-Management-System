@@ -1,0 +1,30 @@
+DBCC FREEPROCCACHE;
+SET STATISTICS TIME, IO ON;
+
+
+
+
+CREATE INDEX BORROWERS_EMAIL_INDEX ON Borrowers(Email);
+
+-- SELECT COUNT(*) FROM Borrowers WHERE Email = 'melvym7@dyndns.org';
+
+
+
+
+CREATE INDEX BOOKS_GENRE_INDEX ON Books(Genre);
+
+-- SELECT COUNT(*) FROM Books WHERE Genre = 'Action';
+
+
+
+
+CREATE INDEX LOANS_BOOK_ID_INDEX ON Loans(Book_ID);
+
+-- SELECT COUNT(*) FROM Loans WHERE Book_ID = 1000;
+
+
+
+
+CREATE INDEX LOANS_BORROWER_ID_INDEX ON Loans(Borrower_ID);
+
+-- SELECT COUNT(*) FROM Loans WHERE Borrower_ID = 1000;
